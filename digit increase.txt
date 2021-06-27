@@ -1,0 +1,32 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+    int n;                     
+    int transformedResult = 0; 
+    int r;                     
+    int count = 0;             
+    cout<<"Enter number to be transformed :" ;
+    cin >> n;
+    cout << "Entered number is " << n << endl;
+    while (n > 0)
+    {
+        r = n % 10; 
+        if (r == 9)
+        {          
+            r = 0; 
+        }
+        else
+        {
+            r = r + 1;
+        }
+ 
+        transformedResult = transformedResult + r * pow(10, count); 
+        n = n / 10;
+        count++;
+    }
+   cout<<"Entered number is "<< transformedResult;
+
+    return 0;
+}
